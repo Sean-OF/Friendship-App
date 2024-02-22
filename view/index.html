@@ -6,16 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/script.js"></script>
     <style>
-        body {
+        
+        .body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start; /* Align items at the top of the page */
       height: 100vh;
       margin: 0;
+      transition: background-color 0.5s;
+    }
+    .theme1 {
+      background-color: #3498db;
+      color: #ffffff;
+    }
+    .theme2 {
+      background-color: #e74c3c;
+      color: #ffffff;
+    }
+    .theme3 {
+      background-color: #2ecc71;
+      color: #ffffff;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
     }
 
     .container {
@@ -76,9 +95,10 @@
 
 <body>
     <div class="container">
+        <button id="themeButton" onclick="toggleTheme()">Change Theme</button>
         <div class="image-container">
           <div class="profile-container">
-            <h2><a href="my-profile.html">Login</a></h2>
+            <h2><a href="main.html">Login</a></h2>
             <img src="icons/noun-user-318556.png" width="110%" height="auto">
           </div>
     
@@ -87,7 +107,8 @@
             <img src="icons/noun-register-4915664.png" width="500%" height="auto">
           </div>
         </div>
-      </div>
-    </body>
+    </div>
+    <script src="/script.js"></script>
 </body>
+
 </html>

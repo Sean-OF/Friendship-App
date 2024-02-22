@@ -10,7 +10,7 @@ var app = express();
 const client = new pg.Client({
     host: "localhost",
     user: "postgres",
-    password: "",
+    password: "Sp00ky!",
     database: "postgres",
     port: "54321"
 });
@@ -22,7 +22,6 @@ client.connect();
 client.query("SET search_path = \"FriendshipApp\"");
 
 const viewPath = path.join(__dirname, 'view');
-
 
 app.get("/*", function (req, res) {
     const requestedPath = req.path === '/' ? '/index.html' : req.path;
